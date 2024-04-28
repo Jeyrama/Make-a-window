@@ -34,3 +34,10 @@ function makeAWindow(num) {
 }
 
 // or
+
+function makeAWindow(num) {
+  let topAndBottom = `${"-".repeat(num * 2 + 3)}`;
+  let panes = (`|${".".repeat(num)}`.repeat(2) + "|\n").repeat(num).trim();
+  let center = `|${"-".repeat(num)}+${"-".repeat(num)}|`;
+  return [topAndBottom, panes, center, panes, topAndBottom].join("\n");
+}
